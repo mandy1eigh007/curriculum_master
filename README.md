@@ -67,23 +67,35 @@ The built site will be in the `site/` directory.
 
 ## PDF Generation
 
-PDF is automatically generated during the build process using the mkdocs-exporter plugin.
+PDF generation is available via the mkdocs-exporter plugin but may have issues in some CI environments.
 
-### Manual PDF Generation
+### Manual PDF Generation (Local)
 
-```bash
-mkdocs build
-```
+To enable PDF generation locally:
 
-The aggregated PDF will be output to: `site/downloads/curriculum.pdf`
+1. Uncomment the exporter plugin in `mkdocs.yml`:
+   ```yaml
+   plugins:
+     - search
+     - exporter  # Uncomment this line
+   ```
+
+2. Build the documentation:
+   ```bash
+   mkdocs build
+   ```
+
+Individual PDFs will be generated for each page in the site output.
 
 ### PDF Features
 
-- **Aggregated Output**: Single PDF containing all curriculum content
+- **Per-Page PDFs**: Individual PDF files for each documentation page
 - **ANEW Brand Styling**: Professional formatting with brand colors and fonts
 - **Page Breaks**: Automatic section separation
 - **Headers/Footers**: Title and page numbers on each page
 - **Clean Design**: No decorative icons, professional appearance
+
+Note: PDF generation uses Playwright and may timeout in restricted network environments. For production use, consider generating PDFs locally and uploading them as build artifacts.
 
 ## Repository Structure
 

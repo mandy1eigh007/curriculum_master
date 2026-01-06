@@ -31,11 +31,18 @@ Applied mathematics essential for program success.
 
 ## Download PDF
 
-The complete curriculum is available as a PDF document, automatically generated during the build process:
+PDF versions of individual pages can be generated using the mkdocs-exporter plugin.
 
-<a href="../downloads/curriculum.pdf" class="pdf-download">Download Complete Curriculum (PDF)</a>
+To enable PDF generation locally, uncomment the exporter plugin in `mkdocs.yml` and rebuild:
 
-Note: PDF files are generated individually for each page using the mkdocs-exporter plugin.
+```bash
+# In mkdocs.yml, uncomment:
+# - exporter
+
+mkdocs build
+```
+
+Individual PDF files will be available for each page in the built site.
 
 ## Quick Start
 

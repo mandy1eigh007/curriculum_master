@@ -28,7 +28,9 @@ extra_css:
 
 plugins:
   - search
-  - exporter
+  # Note: PDF export via mkdocs-exporter can be enabled locally
+  # Uncomment the following line to enable PDF generation:
+  # - exporter
 
 nav:
   - Home: index.md
