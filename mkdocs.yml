@@ -1,0 +1,65 @@
+site_name: ANEW Curriculum
+site_description: ANEW Curriculum - Docs-as-Code Implementation
+site_author: ANEW
+site_url: https://mandy1eigh007.github.io/curriculum_master/
+
+theme:
+  name: material
+  palette:
+    primary: custom
+    accent: custom
+  font:
+    text: Helvetica Neue
+    code: Courier New
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+  icon:
+    repo: fontawesome/brands/github
+
+repo_url: https://github.com/mandy1eigh007/curriculum_master
+repo_name: mandy1eigh007/curriculum_master
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - exporter
+
+nav:
+  - Home: index.md
+  - Curriculum:
+    - Foundations:
+      - Introduction to Foundations: curriculum/foundations/introduction.md
+    - Development:
+      - Introduction to Development: curriculum/development/introduction.md
+    - Advanced Topics:
+      - Introduction to Advanced Topics: curriculum/advanced/introduction.md
+    - Capstone:
+      - Capstone Project: curriculum/capstone/project.md
+    - Mathematics:
+      - Applied Mathematics: curriculum/mathematics/applied.md
+  - Governance:
+    - Overview: governance/overview.md
+    - Single Source of Truth: governance/single-source.md
+    - Change Control: governance/change-control.md
+    - Golden Rule: governance/golden-rule.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
