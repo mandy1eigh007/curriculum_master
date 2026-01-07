@@ -26,7 +26,6 @@ Grit is the combination of passion and perseverance toward long-term goals. It m
 
 - Maintaining effort and interest over years despite failure, adversity, and plateaus
 - Working strenuously toward challenges
-- Maintaining effort and interest over time
 - Not giving up when things get difficult
 
 In software development, grit means continuing to debug a problem even after hours of frustration, learning new technologies when they seem overwhelming, and persisting through the inevitable challenges of coding.
