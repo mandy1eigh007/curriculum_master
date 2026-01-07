@@ -1,0 +1,130 @@
+# MkDocs Configuration for ANEW Curriculum Master
+# Docs-as-code curriculum repository with Golden Rule enforcement
+
+# Site metadata
+site_name: ANEW Curriculum Master
+site_description: Single source of truth for ANEW curriculum content
+site_author: ANEW
+site_url: https://mandy1eigh007.github.io/curriculum_master/
+
+# Repository information
+repo_name: mandy1eigh007/curriculum_master
+repo_url: https://github.com/mandy1eigh007/curriculum_master
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2026 ANEW
+
+# Theme configuration - Material theme with clean, non-decorative styling
+theme:
+  name: material
+  language: en
+  palette:
+    # ANEW Blue primary color
+    primary: blue
+    accent: green
+  font: false  # Disable Google Fonts to avoid network errors and use system fonts
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.share
+    - toc.follow
+  # No logo or favicon with decorative icons
+  icon:
+    repo: fontawesome/brands/github
+
+# Extra CSS for ANEW branding
+extra_css:
+  - stylesheets/extra.css
+
+# Plugins
+plugins:
+  - search
+  - exporter:
+      formats:
+        pdf:
+          enabled: true
+          # Aggregate all content into single PDF
+          aggregator:
+            enabled: true
+            output: downloads/curriculum.pdf
+            covers: none
+          # PDF-specific styling
+          stylesheets:
+            - docs/stylesheets/pdf.css
+          # Browser settings
+          concurrency: 1
+
+# Markdown extensions
+markdown_extensions:
+  # Standard extensions
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  
+  # PyMdown Extensions for enhanced Markdown
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Navigation structure (matches folder order)
+nav:
+  - Home: index.md
+  
+  - Governance:
+    - Single Source of Truth: governance/single-source.md
+    - Pull Request Workflow: governance/pr-workflow.md
+    - Golden Rule Enforcement: governance/golden-rule.md
+  
+  - Curriculum:
+    - Foundations:
+      - Developer Fundamentals: curriculum/01-foundations/developer-fundamentals.md
+      - Version Control and Collaboration: curriculum/01-foundations/version-control.md
+    
+    - Mathematics:
+      - Algebra and Logic: curriculum/05-mathematics/algebra-logic.md
+
+# Extra configuration
+extra:
+  # Social links (optional, can add later)
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mandy1eigh007/curriculum_master
+  
+  # Analytics (optional, can configure later)
+  # analytics:
+  #   provider: google
+  #   property: G-XXXXXXXXXX
+
+# Strict mode - fail on warnings
+strict: false
+
+# Use directory URLs
+use_directory_urls: true

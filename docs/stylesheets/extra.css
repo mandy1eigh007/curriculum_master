@@ -1,0 +1,219 @@
+/* ANEW Brand Standards - Web Styles */
+/* 
+ * Primary Typeface: Helvetica Neue, Helvetica, Arial, sans-serif
+ * Colors:
+ *   - Blue: #326691
+ *   - Green: #3FAE49
+ *   - Gray: #505858
+ */
+
+:root {
+    /* ANEW Brand Colors */
+    --anew-blue: #326691;
+    --anew-green: #3FAE49;
+    --anew-gray: #505858;
+    --anew-light-gray: #f5f5f5;
+    --anew-border-gray: #e0e0e0;
+    
+    /* Typography */
+    --anew-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Base Typography */
+body {
+    font-family: var(--anew-font-family);
+    color: var(--anew-gray);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--anew-font-family);
+    font-weight: 600;
+    color: var(--anew-blue);
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+}
+
+h1 {
+    font-size: 2.25em;
+    border-bottom: 3px solid var(--anew-green);
+    padding-bottom: 0.3em;
+}
+
+h2 {
+    font-size: 1.75em;
+    border-bottom: 2px solid var(--anew-border-gray);
+    padding-bottom: 0.25em;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: var(--anew-gray);
+}
+
+/* Links */
+a {
+    color: var(--anew-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--anew-green);
+    text-decoration: underline;
+}
+
+/* Code Blocks */
+code {
+    font-family: "Courier New", Courier, monospace;
+    background-color: var(--anew-light-gray);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+pre {
+    background-color: var(--anew-light-gray);
+    border-left: 4px solid var(--anew-blue);
+    padding: 1em;
+    overflow-x: auto;
+    border-radius: 4px;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5em 0;
+}
+
+th {
+    background-color: var(--anew-blue);
+    color: white;
+    padding: 0.75em;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    border: 1px solid var(--anew-border-gray);
+    padding: 0.75em;
+}
+
+tr:nth-child(even) {
+    background-color: var(--anew-light-gray);
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid var(--anew-green);
+    padding-left: 1em;
+    margin-left: 0;
+    font-style: italic;
+    color: var(--anew-gray);
+}
+
+/* Horizontal Rules */
+hr {
+    border: none;
+    border-top: 2px solid var(--anew-border-gray);
+    margin: 2em 0;
+}
+
+/* Emphasis */
+strong, b {
+    font-weight: 600;
+    color: var(--anew-blue);
+}
+
+em, i {
+    font-style: italic;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5em auto;
+}
+
+/* Navigation - Material theme specific overrides */
+.md-header {
+    background-color: var(--anew-blue);
+}
+
+.md-tabs {
+    background-color: var(--anew-blue);
+}
+
+.md-nav__link--active {
+    color: var(--anew-green);
+}
+
+.md-typeset a {
+    color: var(--anew-blue);
+}
+
+.md-typeset a:hover {
+    color: var(--anew-green);
+}
+
+/* Admonitions - clean style without icons in content */
+.admonition {
+    border-left: 4px solid var(--anew-blue);
+    padding: 1em;
+    margin: 1.5em 0;
+    background-color: var(--anew-light-gray);
+}
+
+.admonition.note {
+    border-left-color: var(--anew-blue);
+}
+
+.admonition.tip {
+    border-left-color: var(--anew-green);
+}
+
+.admonition.warning {
+    border-left-color: #ff9800;
+}
+
+/* Clean content - no decorative icons or emojis */
+.md-content__inner {
+    font-family: var(--anew-font-family);
+}
+
+/* Footer */
+.md-footer {
+    background-color: var(--anew-gray);
+}
+
+/* Print-friendly adjustments */
+@media print {
+    body {
+        font-size: 11pt;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+    
+    a {
+        color: var(--anew-blue);
+        text-decoration: none;
+    }
+}

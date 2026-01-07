@@ -1,0 +1,296 @@
+/* ANEW Brand Standards - PDF Styles */
+/* 
+ * PDF-specific styling for mkdocs-exporter
+ * Includes page breaks, headers, footers, and print optimization
+ */
+
+@page {
+    size: letter;
+    margin: 1in 0.75in 1in 0.75in;
+    
+    /* Page numbers in footer */
+    @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 9pt;
+        color: #505858;
+    }
+    
+    /* Document title in header */
+    @top-center {
+        content: "ANEW Curriculum Master";
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 9pt;
+        color: #505858;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 5pt;
+    }
+}
+
+/* First page without header */
+@page :first {
+    @top-center {
+        content: none;
+    }
+}
+
+/* Root variables for PDF */
+:root {
+    --anew-blue: #326691;
+    --anew-green: #3FAE49;
+    --anew-gray: #505858;
+    --anew-light-gray: #f5f5f5;
+    --anew-border-gray: #e0e0e0;
+}
+
+/* PDF body settings */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    color: var(--anew-gray);
+}
+
+/* Headings with page break control */
+h1 {
+    font-size: 20pt;
+    font-weight: 600;
+    color: var(--anew-blue);
+    border-bottom: 3pt solid var(--anew-green);
+    padding-bottom: 6pt;
+    margin-top: 0;
+    margin-bottom: 12pt;
+    page-break-after: avoid;
+    page-break-before: always;
+}
+
+/* First h1 doesn't need page break before */
+h1:first-of-type {
+    page-break-before: avoid;
+}
+
+h2 {
+    font-size: 16pt;
+    font-weight: 600;
+    color: var(--anew-blue);
+    border-bottom: 2pt solid var(--anew-border-gray);
+    padding-bottom: 4pt;
+    margin-top: 18pt;
+    margin-bottom: 10pt;
+    page-break-after: avoid;
+}
+
+h3 {
+    font-size: 14pt;
+    font-weight: 600;
+    color: var(--anew-gray);
+    margin-top: 14pt;
+    margin-bottom: 8pt;
+    page-break-after: avoid;
+}
+
+h4, h5, h6 {
+    font-size: 12pt;
+    font-weight: 600;
+    color: var(--anew-gray);
+    margin-top: 12pt;
+    margin-bottom: 6pt;
+    page-break-after: avoid;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 10pt;
+    orphans: 3;
+    widows: 3;
+}
+
+/* Links - show URLs in PDF */
+a {
+    color: var(--anew-blue);
+    text-decoration: none;
+}
+
+a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: var(--anew-gray);
+}
+
+/* Don't show anchor links */
+a[href^="#"]:after {
+    content: "";
+}
+
+/* Code blocks */
+code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 9.5pt;
+    background-color: var(--anew-light-gray);
+    padding: 2pt 4pt;
+    border-radius: 2pt;
+}
+
+pre {
+    background-color: var(--anew-light-gray);
+    border-left: 4pt solid var(--anew-blue);
+    padding: 10pt;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+    overflow-x: auto;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 20pt;
+    margin-bottom: 10pt;
+}
+
+li {
+    margin-bottom: 5pt;
+}
+
+/* Nested lists */
+ul ul, ol ol, ul ol, ol ul {
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+}
+
+th {
+    background-color: var(--anew-blue);
+    color: white;
+    padding: 8pt;
+    text-align: left;
+    font-weight: 600;
+    font-size: 10pt;
+}
+
+td {
+    border: 1pt solid var(--anew-border-gray);
+    padding: 6pt 8pt;
+    font-size: 10pt;
+}
+
+tr:nth-child(even) {
+    background-color: var(--anew-light-gray);
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4pt solid var(--anew-green);
+    padding-left: 12pt;
+    margin-left: 0;
+    margin-top: 10pt;
+    margin-bottom: 10pt;
+    font-style: italic;
+    color: var(--anew-gray);
+    page-break-inside: avoid;
+}
+
+/* Horizontal rules */
+hr {
+    border: none;
+    border-top: 2pt solid var(--anew-border-gray);
+    margin: 18pt 0;
+}
+
+/* Emphasis */
+strong, b {
+    font-weight: 600;
+    color: var(--anew-blue);
+}
+
+em, i {
+    font-style: italic;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 12pt auto;
+    page-break-inside: avoid;
+}
+
+/* Page breaks */
+.page-break {
+    page-break-after: always;
+}
+
+/* Avoid breaking these elements */
+.keep-together {
+    page-break-inside: avoid;
+}
+
+/* Section breaks */
+section {
+    page-break-before: always;
+}
+
+section:first-of-type {
+    page-break-before: avoid;
+}
+
+/* Title page styling */
+.title-page {
+    text-align: center;
+    padding-top: 100pt;
+    page-break-after: always;
+}
+
+.title-page h1 {
+    font-size: 28pt;
+    color: var(--anew-blue);
+    border: none;
+    margin-bottom: 20pt;
+}
+
+/* Table of contents */
+.toc {
+    page-break-after: always;
+}
+
+.toc a:after {
+    content: "";
+}
+
+/* Remove navigation elements from PDF */
+nav, .navigation, .sidebar, .md-header, .md-footer, .md-tabs {
+    display: none;
+}
+
+/* Admonitions */
+.admonition {
+    border-left: 4pt solid var(--anew-blue);
+    padding: 10pt;
+    margin: 10pt 0;
+    background-color: var(--anew-light-gray);
+    page-break-inside: avoid;
+}
+
+.admonition-title {
+    font-weight: 600;
+    margin-bottom: 5pt;
+}
+
+/* Color printing optimization */
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
