@@ -1,6 +1,6 @@
 # MkDocs Configuration for ANEW Curriculum Master - Pull Request Builds
 # Docs-as-code curriculum repository with Golden Rule enforcement
-# This config is used for PR builds and disables PDF generation to avoid Playwright issues
+# This config is used for PR builds and disables PDF generation to avoid browser download failures in CI
 
 # Site metadata
 site_name: ANEW Curriculum Master
