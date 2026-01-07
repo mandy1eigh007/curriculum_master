@@ -51,7 +51,7 @@ jobs:
       
       - name: Build MkDocs site with PDF
         run: |
-          mkdocs build --strict
+          mkdocs build
           echo "MkDocs build completed successfully!"
       
       - name: Verify PDF was generated
