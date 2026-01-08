@@ -9,66 +9,30 @@ on:
       - main
   workflow_dispatch:
 
-<<<<<<< HEAD
-=======
 # Sets permissions for GitHub Pages deployment
->>>>>>> origin/main
 permissions:
   contents: read
   pages: write
   id-token: write
 
-<<<<<<< HEAD
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-=======
 # Allow one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: true
->>>>>>> origin/main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-<<<<<<< HEAD
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Python
-=======
     
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
       
       - name: Set up Python
->>>>>>> origin/main
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
-<<<<<<< HEAD
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-
-      - name: Install Playwright
-        run: |
-
-      - name: Validate Golden Rule hours
-        run: |
-          python scripts/validate_golden_rule.py
-
-      - name: Build MkDocs site
-        run: |
-          mkdocs build
-
-      - name: Upload artifact
-=======
       
       - name: Install Python dependencies
         run: |
@@ -112,20 +76,11 @@ jobs:
           fi
       
       - name: Upload artifact for Pages
->>>>>>> origin/main
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./site
 
   deploy:
-<<<<<<< HEAD
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-=======
     # Only deploy on push to main, not on PRs
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     
@@ -140,7 +95,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     
->>>>>>> origin/main
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
