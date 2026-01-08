@@ -1,13 +1,13 @@
 # Implement docs-as-code curriculum repository with Golden Rule enforcement
 
 ## Summary
-This PR establishes a docs-as-code curriculum repository for ANEW's pre-apprenticeship program. It includes Golden Rule hour enforcement and a consistent publishing pipeline for web access (and optional PDF export, if enabled).
+This PR establishes a docs-as-code curriculum repository for ANEW's pre-apprenticeship program. It adds Golden Rule hour enforcement and a MkDocs publishing pipeline for web access. PDF export is included only if the repo's configured exporter/build steps are enabled.
 
 ## Key Changes
 
 ### Repository foundation
-- MkDocs site configuration and navigation for curriculum content
-- Governance docs defining a single source of truth and change control
+- MkDocs configuration and navigation for curriculum content
+- Governance documentation defining single source of truth and change control
 
 ### Golden Rule enforcement
 - Curriculum hour structure defined in `curriculum_data/golden_rule_hours.yaml`
@@ -15,7 +15,7 @@ This PR establishes a docs-as-code curriculum repository for ANEW's pre-apprenti
   - Core = 240 hours
   - Math = 40 hours
   - Total = 280 hours
-  - Bucket/subunit totals must sum correctly
+  - Bucket/subunit totals must sum to declared totals
 
 ### Branding and styling
 - ANEW brand tokens via CSS (font stack and approved colors)
@@ -37,23 +37,11 @@ This PR establishes a docs-as-code curriculum repository for ANEW's pre-apprenti
 - `docs/professional-development/grit-growth-mindset/instructor.md`
 
 ## How to test locally
-1) Validate Golden Rule totals:
+1) Install dependencies:
 ```bash
-python scripts/validate_golden_rule.py
+pip install -r requirements.txt
 ```
 
-2) Build documentation site:
-```bash
-mkdocs build --clean
-```
-
-3) Serve locally (optional):
-```bash
-mkdocs serve
-```
-
-## Validation Results
-✅ Golden Rule compliance verified  
-✅ MkDocs builds successfully  
-✅ All merge conflicts resolved  
-✅ Repository ready for deployment
+## Evidence
+- Validation + build run locally in Codespace: `python scripts/validate_golden_rule.py` and `mkdocs build --clean`
+- CI status: (link to Actions run)
