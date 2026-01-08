@@ -113,10 +113,7 @@ nav:
       - Statistics and Probability: curriculum/05-mathematics/statistics-probability.md
     - Grit & Growth Mindset: professional-development/grit-growth-mindset/index.md
     - Grit & Growth Mindset (Instructor): professional-development/grit-growth-mindset/instructor.md
-  - Home: index.md
-  - Governance:
-  - Curriculum:
-  - Professional Development:
+    - Home: index.md
 # Extra configuration
 extra:
   # Social links (optional, can add later)
