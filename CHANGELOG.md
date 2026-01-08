@@ -1,6 +1,10 @@
 # Changelog
 
+<<<<<<< HEAD
 All notable changes to this project will be documented in this file.
+=======
+All notable changes to the ANEW Curriculum will be documented in this file.
+>>>>>>> origin/main
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -8,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+<<<<<<< HEAD
 - Initial docs-as-code curriculum repository implementation
 - Golden Rule hour structure (Core 240 + Math 40 = 280 total)
 - MkDocs configuration with mkdocs-exporter plugin for PDF generation
@@ -56,3 +61,34 @@ When creating a new release, copy this template:
 
 [Unreleased]: https://github.com/mandy1eigh007/curriculum_master/compare/vX.Y.Z...HEAD
 [X.Y.Z]: https://github.com/mandy1eigh007/curriculum_master/releases/tag/vX.Y.Z
+=======
+- Initial repository setup with docs-as-code infrastructure
+- Golden Rule hours structure (240 core + 40 math = 280 total)
+- Automated validation of Golden Rule hours
+- GitHub Pages deployment with PDF generation
+- ANEW brand standards styling
+
+## Template for Future Entries
+
+```markdown
+## [Version] - YYYY-MM-DD
+
+### Added
+- New features or content
+
+### Changed
+- Changes to existing functionality or content
+
+### Deprecated
+- Features or content marked for removal
+
+### Removed
+- Removed features or content
+
+### Fixed
+- Bug fixes
+
+### Security
+- Security fixes or improvements
+```
+>>>>>>> origin/main

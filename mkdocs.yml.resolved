@@ -6,12 +6,15 @@ site_name: ANEW Curriculum Master
 site_description: Single source of truth for ANEW curriculum content
 site_author: ANEW
 site_url: https://mandy1eigh007.github.io/curriculum_master/
+
 # Repository information
 repo_name: mandy1eigh007/curriculum_master
 repo_url: https://github.com/mandy1eigh007/curriculum_master
 edit_uri: edit/main/docs/
+
 # Copyright
 copyright: Copyright &copy; 2026 ANEW
+
 # Theme configuration - Material theme with clean, non-decorative styling
 theme:
   name: material
@@ -31,10 +34,15 @@ theme:
   # No logo or favicon with decorative icons
   icon:
     repo: fontawesome/brands/github
+
 # Extra CSS for ANEW branding
 extra_css:
   - stylesheets/extra.css
   - styles/anew.css
+
+  - stylesheets/extra.css
+  - styles/anew.css
+
 # Plugins
 plugins:
   - search
@@ -52,6 +60,7 @@ plugins:
             - docs/stylesheets/pdf.css
           # Browser settings
           concurrency: 1
+
 # Markdown extensions
 markdown_extensions:
   # Standard extensions
@@ -88,11 +97,14 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
 # Navigation structure (matches folder order)
 nav:
+  
     - Single Source of Truth: governance/single-source.md
     - Pull Request Workflow: governance/pr-workflow.md
     - Golden Rule Enforcement: governance/golden-rule.md
+  
     - Foundations:
       - Developer Fundamentals: curriculum/01-foundations/developer-fundamentals.md
       - Version Control and Collaboration: curriculum/01-foundations/version-control.md
@@ -101,33 +113,42 @@ nav:
     - Programming Essentials:
       - Programming Concepts: curriculum/02-programming/programming-concepts.md
       - Data Structures: curriculum/02-programming/data-structures.md
+    
     - Web Development:
       - HTML and CSS: curriculum/03-web-dev/html-css.md
       - JavaScript Fundamentals: curriculum/03-web-dev/javascript-fundamentals.md
       - Responsive Design: curriculum/03-web-dev/responsive-design.md
+    
     - Backend Development:
       - Server-Side Programming: curriculum/04-backend/server-side-programming.md
       - APIs and Integration: curriculum/04-backend/apis-integration.md
+    
     - Mathematics:
       - Algebra and Logic: curriculum/05-mathematics/algebra-logic.md
       - Statistics and Probability: curriculum/05-mathematics/statistics-probability.md
+  
     - Grit & Growth Mindset: professional-development/grit-growth-mindset/index.md
     - Grit & Growth Mindset (Instructor): professional-development/grit-growth-mindset/instructor.md
+
   - Home: index.md
   - Governance:
   - Curriculum:
   - Professional Development:
+
 # Extra configuration
 extra:
   # Social links (optional, can add later)
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/mandy1eigh007/curriculum_master
+  
   # Analytics (optional, can configure later)
   # analytics:
   #   provider: google
   #   property: G-XXXXXXXXXX
+
 # Strict mode - fail on warnings
 strict: false
+
 # Use directory URLs
 use_directory_urls: true

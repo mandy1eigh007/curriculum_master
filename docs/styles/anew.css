@@ -1,0 +1,14 @@
+/* ANEW Brand Standards - CSS Tokens */
+/* This file contains only CSS custom properties (tokens) for ANEW branding */
+
+:root {
+    /* ANEW Brand Colors */
+    --anew-blue: #326691;
+    --anew-green: #3FAE49;
+    --anew-gray: #505858;
+    --anew-light-gray: #f5f5f5;
+    --anew-border-gray: #e0e0e0;
+    
+    /* Typography */
+    --anew-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

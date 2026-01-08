@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Golden Rule Hours Configuration
 # Total must be: Core (excluding Math) = 240, Math = 40, Total = 280
 
@@ -26,3 +27,65 @@ total_curriculum:
       hours: 240
     - name: "Mathematics"
       hours: 40
+=======
+# Golden Rule Hours - Immutable Hour Structure
+# Core (excluding Math): 240 hours
+# Math: 40 hours
+# Total: 280 hours
+
+buckets:
+  - name: "Foundations"
+    category: "core"
+    hours_total: 80
+    subunits:
+      - name: "Developer Fundamentals"
+        hours: 40
+      - name: "Version Control & Collaboration"
+        hours: 20
+      - name: "Problem Solving Basics"
+        hours: 20
+
+  - name: "Programming Essentials"
+    category: "core"
+    hours_total: 60
+    subunits:
+      - name: "Programming Concepts"
+        hours: 30
+      - name: "Data Structures"
+        hours: 30
+
+  - name: "Web Development"
+    category: "core"
+    hours_total: 60
+    subunits:
+      - name: "HTML & CSS"
+        hours: 20
+      - name: "JavaScript Fundamentals"
+        hours: 25
+      - name: "Responsive Design"
+        hours: 15
+
+  - name: "Backend Development"
+    category: "core"
+    hours_total: 40
+    subunits:
+      - name: "Server-Side Programming"
+        hours: 20
+      - name: "APIs & Integration"
+        hours: 20
+
+  - name: "Mathematics"
+    category: "math"
+    hours_total: 40
+    subunits:
+      - name: "Algebra & Logic"
+        hours: 20
+      - name: "Statistics & Probability"
+        hours: 20
+
+# Validation rules:
+# - Sum of all core category buckets = 240
+# - Sum of all math category buckets = 40
+# - Total sum = 280
+# - Each bucket's subunits must sum to hours_total
+>>>>>>> origin/main
