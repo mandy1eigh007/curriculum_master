@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+mkdocs>=1.5.0
+mkdocs-material>=9.0.0
+mkdocs-exporter>=6.0.0
+pyyaml>=6.0.0
+=======
 # Python 3.11+ required
 # MkDocs and essential plugins for docs-as-code curriculum
 mkdocs>=1.5.3
@@ -5,3 +11,4 @@ mkdocs-material>=9.5.0
 mkdocs-exporter>=6.0.0
 pymdown-extensions>=10.7
 pyyaml>=6.0
+>>>>>>> origin/main

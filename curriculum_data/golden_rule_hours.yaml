@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+# Golden Rule Hours Configuration
+# Total must be: Core (excluding Math) = 240, Math = 40, Total = 280
+
+core_curriculum:
+  hours_total: 240
+  subunits:
+    - name: "Foundations"
+      hours: 60
+    - name: "Development"
+      hours: 80
+    - name: "Advanced Topics"
+      hours: 60
+    - name: "Capstone"
+      hours: 40
+
+mathematics:
+  hours_total: 40
+  subunits:
+    - name: "Applied Mathematics"
+      hours: 40
+
+total_curriculum:
+  hours_total: 280
+  components:
+    - name: "Core Curriculum"
+      hours: 240
+    - name: "Mathematics"
+      hours: 40
+=======
 # Golden Rule Hours - Immutable Hour Structure
 # Core (excluding Math): 240 hours
 # Math: 40 hours
@@ -58,3 +88,4 @@ buckets:
 # - Sum of all math category buckets = 40
 # - Total sum = 280
 # - Each bucket's subunits must sum to hours_total
+>>>>>>> origin/main

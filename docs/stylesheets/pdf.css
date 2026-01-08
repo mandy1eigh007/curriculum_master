@@ -1,3 +1,182 @@
+<<<<<<< HEAD
+/* PDF-specific styles for mkdocs-exporter */
+/* ANEW Brand Standard Guidelines for PDF output */
+
+:root {
+  /* Primary Colors */
+  --anew-blue: #326691;
+  --anew-green: #3FAE49;
+  --anew-gray: #505858;
+  
+  /* Typography */
+  --anew-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Page setup */
+@page {
+  size: Letter;
+  margin: 1in 0.75in;
+  
+  @top-center {
+    content: "ANEW Curriculum";
+    font-family: var(--anew-font-family);
+    font-size: 10pt;
+    color: var(--anew-gray);
+  }
+  
+  @bottom-center {
+    content: "Page " counter(page);
+    font-family: var(--anew-font-family);
+    font-size: 10pt;
+    color: var(--anew-gray);
+  }
+}
+
+/* Base typography */
+body {
+  font-family: var(--anew-font-family);
+  font-size: 11pt;
+  line-height: 1.6;
+  color: var(--anew-gray);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--anew-font-family);
+  color: var(--anew-blue);
+  font-weight: 500;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 24pt;
+  border-bottom: 2pt solid var(--anew-blue);
+  padding-bottom: 0.3em;
+  page-break-before: always;
+  margin-top: 0;
+}
+
+h1:first-of-type {
+  page-break-before: avoid;
+}
+
+h2 {
+  font-size: 18pt;
+  margin-top: 1.5em;
+  page-break-before: auto;
+}
+
+h3 {
+  font-size: 14pt;
+  margin-top: 1.2em;
+}
+
+h4 {
+  font-size: 12pt;
+  margin-top: 1em;
+}
+
+/* Page breaks between major sections */
+h1 {
+  page-break-before: always;
+}
+
+h1:first-child {
+  page-break-before: avoid;
+}
+
+/* Avoid breaks after headings and before content */
+h1, h2, h3, h4, h5, h6 {
+  page-break-after: avoid;
+}
+
+/* Links */
+a {
+  color: var(--anew-blue);
+  text-decoration: none;
+}
+
+/* Print URLs after links */
+a[href^="http"]:after {
+  content: " (" attr(href) ")";
+  font-size: 9pt;
+  color: var(--anew-gray);
+}
+
+/* Code blocks */
+code {
+  background-color: #f5f5f5;
+  padding: 2pt 4pt;
+  border-radius: 2pt;
+  font-size: 9pt;
+  font-family: "Courier New", Courier, monospace;
+}
+
+pre {
+  background-color: #f5f5f5;
+  border-left: 3pt solid var(--anew-blue);
+  padding: 10pt;
+  font-size: 9pt;
+  font-family: "Courier New", Courier, monospace;
+  page-break-inside: avoid;
+  overflow-x: auto;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  page-break-inside: avoid;
+  font-size: 10pt;
+}
+
+th {
+  background-color: var(--anew-blue);
+  color: white;
+  padding: 8pt;
+  text-align: left;
+  font-weight: 500;
+}
+
+td {
+  border: 1pt solid #ddd;
+  padding: 6pt;
+}
+
+tr {
+  page-break-inside: avoid;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Lists */
+ul, ol {
+  line-height: 1.8;
+  page-break-inside: avoid;
+}
+
+li {
+  page-break-inside: avoid;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4pt solid var(--anew-green);
+  padding-left: 1em;
+  margin-left: 0;
+  color: var(--anew-gray);
+  font-style: italic;
+  page-break-inside: avoid;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  page-break-inside: avoid;
+=======
 /* ANEW Brand Standards - PDF Styles */
 /* 
  * PDF-specific styling for mkdocs-exporter
@@ -96,10 +275,36 @@ h4, h5, h6 {
     margin-top: 12pt;
     margin-bottom: 6pt;
     page-break-after: avoid;
+>>>>>>> origin/main
 }
 
 /* Paragraphs */
 p {
+<<<<<<< HEAD
+  margin: 0.8em 0;
+  orphans: 3;
+  widows: 3;
+}
+
+/* Strong and emphasis */
+strong {
+  color: var(--anew-blue);
+  font-weight: 600;
+}
+
+em {
+  color: var(--anew-gray);
+}
+
+/* Remove navigation and other web-only elements */
+nav, .md-header, .md-footer, .md-sidebar {
+  display: none !important;
+}
+
+/* Table of contents */
+.md-nav {
+  page-break-after: always;
+=======
     margin-bottom: 10pt;
     orphans: 3;
     widows: 3;
@@ -293,4 +498,5 @@ nav, .navigation, .sidebar, .md-header, .md-footer, .md-tabs {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
+>>>>>>> origin/main
 }
