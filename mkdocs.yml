@@ -1,26 +1,24 @@
-# MkDocs Configuration for ANEW Curriculum Master
-# Docs-as-code curriculum repository with Golden Rule enforcement
+# mkdocs.yml
+# ANEW Curriculum Master — Docs-as-code repo with Golden Rule enforcement
 
-# Site metadata
 site_name: ANEW Curriculum Master
 site_description: Single source of truth for ANEW curriculum content
 site_author: ANEW
 site_url: https://mandy1eigh007.github.io/curriculum_master/
-# Repository information
+
 repo_name: mandy1eigh007/curriculum_master
 repo_url: https://github.com/mandy1eigh007/curriculum_master
 edit_uri: edit/main/docs/
-# Copyright
+
 copyright: Copyright &copy; 2026 ANEW
-# Theme configuration - Material theme with clean, non-decorative styling
+
 theme:
   name: material
   language: en
   palette:
-    # ANEW Blue primary color
     primary: blue
     accent: green
-  font: false  # Disable Google Fonts to avoid network errors and use system fonts
+  font: false  # Disable Google Fonts (no network dependency)
   features:
     - navigation.tabs
     - navigation.sections
@@ -28,33 +26,26 @@ theme:
     - search.highlight
     - search.share
     - toc.follow
-  # No logo or favicon with decorative icons
-  icon:
-    repo: fontawesome/brands/github
-# Extra CSS for ANEW branding
+
 extra_css:
   - stylesheets/extra.css
-  - styles/anew.css
-# Plugins
+  - stylesheets/anew.css
+
 plugins:
   - search
   - exporter:
       formats:
         pdf:
           enabled: true
-          # Aggregate all content into single PDF
           aggregator:
             enabled: true
             output: downloads/curriculum.pdf
             covers: none
-          # PDF-specific styling
           stylesheets:
             - docs/stylesheets/pdf.css
-          # Browser settings
           concurrency: 1
-# Markdown extensions
+
 markdown_extensions:
-  # Standard extensions
   - abbr
   - admonition
   - attr_list
@@ -66,8 +57,7 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 3
-  
-  # PyMdown Extensions for enhanced Markdown
+
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
@@ -88,52 +78,20 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-# Navigation structure (matches folder order)
+
 nav:
-    - Home: index.md
-    - Single Source of Truth: governance/single-source.md
-    - Pull Request Workflow: governance/pr-workflow.md
-    - Golden Rule Enforcement: governance/golden-rule.md
-    - Change Control: governance/change-control.md
-    - Governance Overview: governance/overview.md
-    - Foundations:
-      - Introduction: curriculum/foundations/introduction.md
-      - Developer Fundamentals: curriculum/01-foundations/developer-fundamentals.md
-      - Version Control and Collaboration: curriculum/01-foundations/version-control.md
-      - Problem Solving Basics: curriculum/01-foundations/problem-solving.md
-    
-    - Programming Essentials:
-      - Programming Concepts: curriculum/02-programming/programming-concepts.md
-      - Data Structures: curriculum/02-programming/data-structures.md
-    - Web Development:
-      - HTML and CSS: curriculum/03-web-dev/html-css.md
-      - JavaScript Fundamentals: curriculum/03-web-dev/javascript-fundamentals.md
-      - Responsive Design: curriculum/03-web-dev/responsive-design.md
-    - Backend Development:
-      - Server-Side Programming: curriculum/04-backend/server-side-programming.md
-      - APIs and Integration: curriculum/04-backend/apis-integration.md
-    - Mathematics:
-      - Introduction: curriculum/mathematics/applied.md
-      - Algebra and Logic: curriculum/05-mathematics/algebra-logic.md
-      - Statistics and Probability: curriculum/05-mathematics/statistics-probability.md
-    - Advanced Topics:
-      - Introduction: curriculum/advanced/introduction.md
-    - Development:
-      - Introduction: curriculum/development/introduction.md
-    - Capstone Project: curriculum/capstone/project.md
-    - Grit & Growth Mindset: professional-development/grit-growth-mindset/index.md
-    - Grit & Growth Mindset (Instructor): professional-development/grit-growth-mindset/instructor.md
-# Extra configuration
-extra:
-  # Social links (optional, can add later)
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/mandy1eigh007/curriculum_master
-  # Analytics (optional, can configure later)
-  # analytics:
-  #   provider: google
-  #   property: G-XXXXXXXXXX
-# Strict mode - fail on warnings
-strict: false
-# Use directory URLs
+  - Home: index.md
+
+  - Governance:
+      - Single Source of Truth: governance/single-source.md
+      - Pull Request Workflow: governance/pr-workflow.md
+      - Golden Rule Enforcement: governance/golden-rule.md
+      - Change Control: governance/change-control.md
+      - Governance Overview: governance/overview.md
+
+  - Professional Development:
+      - Grit & Growth Mindset: professional-development/grit-growth-mindset/index.md
+      - Grit & Growth Mindset (Instructor): professional-development/grit-growth-mindset/instructor.md
+
+strict: true
 use_directory_urls: true
