@@ -38,6 +38,7 @@ theme:
 # Extra CSS for ANEW branding
 extra_css:
   - stylesheets/extra.css
+  - styles/anew.css
 
 # Plugins
 plugins:
@@ -125,6 +126,10 @@ nav:
     - Mathematics:
       - Algebra and Logic: curriculum/05-mathematics/algebra-logic.md
       - Statistics and Probability: curriculum/05-mathematics/statistics-probability.md
+  
+  - Professional Development:
+    - Grit & Growth Mindset: professional-development/grit-growth-mindset/index.md
+    - Grit & Growth Mindset (Instructor): professional-development/grit-growth-mindset/instructor.md
 
 # Extra configuration
 extra:
