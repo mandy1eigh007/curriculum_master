@@ -90,10 +90,14 @@ markdown_extensions:
   - pymdownx.tilde
 # Navigation structure (matches folder order)
 nav:
+    - Home: index.md
     - Single Source of Truth: governance/single-source.md
     - Pull Request Workflow: governance/pr-workflow.md
     - Golden Rule Enforcement: governance/golden-rule.md
+    - Change Control: governance/change-control.md
+    - Governance Overview: governance/overview.md
     - Foundations:
+      - Introduction: curriculum/foundations/introduction.md
       - Developer Fundamentals: curriculum/01-foundations/developer-fundamentals.md
       - Version Control and Collaboration: curriculum/01-foundations/version-control.md
       - Problem Solving Basics: curriculum/01-foundations/problem-solving.md
@@ -109,11 +113,16 @@ nav:
       - Server-Side Programming: curriculum/04-backend/server-side-programming.md
       - APIs and Integration: curriculum/04-backend/apis-integration.md
     - Mathematics:
+      - Introduction: curriculum/mathematics/applied.md
       - Algebra and Logic: curriculum/05-mathematics/algebra-logic.md
       - Statistics and Probability: curriculum/05-mathematics/statistics-probability.md
+    - Advanced Topics:
+      - Introduction: curriculum/advanced/introduction.md
+    - Development:
+      - Introduction: curriculum/development/introduction.md
+    - Capstone Project: curriculum/capstone/project.md
     - Grit & Growth Mindset: professional-development/grit-growth-mindset/index.md
     - Grit & Growth Mindset (Instructor): professional-development/grit-growth-mindset/instructor.md
-    - Home: index.md
 # Extra configuration
 extra:
   # Social links (optional, can add later)
