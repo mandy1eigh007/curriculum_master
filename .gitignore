@@ -37,11 +37,12 @@ site/
 # OS
 .DS_Store
 Thumbs.db
-<<<<<<< HEAD
-=======
 
 # Temporary files
 tmp/
 temp/
 *.tmp
->>>>>>> origin/main
+
+# Copilot notes folder - for sharing context
+.copilot/notes/*
+!.copilot/notes/README.md
