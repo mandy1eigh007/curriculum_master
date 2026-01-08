@@ -233,11 +233,10 @@ See [Golden Rule Documentation](docs/governance/golden-rule.md) for complete det
 
 This repository implements strict governance controls:
 
-- **Single Source of Truth**: All content in one location, no duplicates
-- **Protected Branch**: Main branch requires PR approval
-- **Required Reviews**: Changes must be reviewed before merge
-- **Automated Validation**: Golden Rule and build checks must pass
-- **No Master-Copy Drift**: Governance prevents divergence
+- **Single Source of Truth:** All curriculum content exists in one location only
+- **No Master-Copy Drift:** Protected branch prevents direct commits
+- **Pull Request Workflow:** All changes require review via PR
+- **Golden Rule Validation:** CI automatically validates hour totals
 
 See the [Governance Documentation](docs/governance/overview.md) for complete details.
 
@@ -321,3 +320,6 @@ See [CHANGELOG.md](CHANGELOG.md) for a history of changes.
 - Built with [MkDocs](https://www.mkdocs.org/)
 - Theme: [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
 - PDF Export: [mkdocs-exporter](https://github.com/adrienbrault/mkdocs-exporter)
+
+Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted): 2026-01-08 16:22:33
+Current User's Login: mandy1eigh007
