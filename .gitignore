@@ -31,17 +31,14 @@ site/
 .vscode/
 .idea/
 *.swp
-*.swo
+*.swo/
 *~
 
 # OS
 .DS_Store
 Thumbs.db
-<<<<<<< HEAD
-=======
 
 # Temporary files
 tmp/
 temp/
 *.tmp
->>>>>>> origin/main
