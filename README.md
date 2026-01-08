@@ -1,29 +1,6 @@
-<<<<<<< HEAD
-# ANEW Curriculum - Docs-as-Code
-
-A comprehensive curriculum repository implementing "docs-as-code" principles with automated validation, PDF generation, and GitHub Pages deployment.
-
-## Overview
-
-This repository contains the ANEW curriculum optimized for the immutable "Golden Rule" hour structure:
-
-- **Core Curriculum (excluding Mathematics):** 240 hours
-- **Mathematics:** 40 hours
-- **Total:** 280 hours
-
-## Features
-
-- **Docs-as-Code**: All curriculum content in Markdown format
-- **Golden Rule Enforcement**: Automated validation of hour totals in CI/CD
-- **PDF Generation**: Automatic aggregated PDF export via mkdocs-exporter
-- **GitHub Pages**: Public access via automatically deployed static site
-- **Protected Branch**: Governance controls prevent master-copy drift
-- **ANEW Brand Standards**: Professional styling following brand guidelines
-- **Single Source of Truth**: No duplicate content, all in one location
-=======
 # ANEW Curriculum Master
 
-Welcome to the ANEW Curriculum Master repository - the single source of truth for all curriculum content.
+A comprehensive curriculum repository implementing "docs-as-code" principles with automated validation, PDF generation, and GitHub Pages deployment.
 
 ## Overview
 
@@ -33,6 +10,8 @@ This repository implements a **docs-as-code** approach for curriculum management
 - **Version Control**: Full change history and governance via Git
 - **Golden Rule Compliance**: Immutable 280-hour structure (240 core + 40 math)
 - **Multi-Format Output**: Web documentation and PDF from the same source
+- **Automated Validation**: CI/CD enforcement of hour totals
+- **ANEW Brand Standards**: Professional styling following brand guidelines
 
 ## Golden Rule Hours Structure
 
@@ -48,7 +27,6 @@ All changes must maintain this structure. The build process validates hours auto
 
 - **Web**: Browse the curriculum at [GitHub Pages](https://mandy1eigh007.github.io/curriculum_master/)
 - **PDF**: Download the complete curriculum as [PDF](/downloads/curriculum.pdf)
->>>>>>> origin/main
 
 ## Quick Start
 
@@ -60,36 +38,6 @@ All changes must maintain this structure. The build process validates hours auto
 
 ### Local Development
 
-<<<<<<< HEAD
-1. **Clone the repository:**
-
-```bash
-git clone https://github.com/mandy1eigh007/curriculum_master.git
-cd curriculum_master
-```
-
-2. **Install dependencies:**
-
-```bash
-pip install -r requirements.txt
-```
-
-3. **Install Playwright (required for PDF generation):**
-
-```bash
-playwright install chromium
-```
-
-4. **Serve locally with live reload:**
-
-```bash
-mkdocs serve
-```
-
-Visit `http://localhost:8000` to preview the documentation.
-
-5. **Build static site:**
-=======
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/mandy1eigh007/curriculum_master.git
@@ -101,60 +49,27 @@ Visit `http://localhost:8000` to preview the documentation.
    pip install -r requirements.txt
    ```
 
-3. **Run the development server**:
+3. **Install Playwright (required for PDF generation)**:
+   ```bash
+   playwright install chromium
+   ```
+
+4. **Serve locally with live reload**:
    ```bash
    mkdocs serve
    ```
    
    Visit `http://127.0.0.1:8000` in your browser.
 
-### Generate PDF
-
-To generate the PDF locally:
->>>>>>> origin/main
+5. **Build static site**:
 
 ```bash
 mkdocs build
 ```
 
-<<<<<<< HEAD
-The built site will be in the `site/` directory.
+The built site will be in the `site/` directory. The PDF will be available at `site/downloads/curriculum.pdf`.
 
-## PDF Generation
-
-PDF generation is available via the mkdocs-exporter plugin but may have issues in some CI environments.
-
-### Manual PDF Generation (Local)
-
-To enable PDF generation locally:
-
-1. Uncomment the exporter plugin in `mkdocs.yml`:
-   ```yaml
-   plugins:
-     - search
-     - exporter  # Uncomment this line
-   ```
-
-2. Build the documentation:
-   ```bash
-   mkdocs build
-   ```
-
-Individual PDFs will be generated for each page in the site output.
-
-### PDF Features
-
-- **Per-Page PDFs**: Individual PDF files for each documentation page
-- **ANEW Brand Styling**: Professional formatting with brand colors and fonts
-- **Page Breaks**: Automatic section separation
-- **Headers/Footers**: Title and page numbers on each page
-- **Clean Design**: No decorative icons, professional appearance
-
-Note: PDF generation uses Playwright and may timeout in restricted network environments. For production use, consider generating PDFs locally and uploading them as build artifacts.
-=======
-The PDF will be available at `site/downloads/curriculum.pdf`.
-
-### Validate Golden Rule Hours
+## Validate Golden Rule Hours
 
 Before making changes, validate the Golden Rule hours:
 
@@ -270,29 +185,23 @@ git push origin v1.0.0
 curriculum_master/
 ├── .github/
 │   └── workflows/
-<<<<<<< HEAD
-│       └── pages.yml              # GitHub Actions workflow for deployment
+│       └── pages.yml          # GitHub Actions for Pages deployment
 ├── curriculum_data/
-│   └── golden_rule_hours.yaml     # Golden Rule hour configuration
+│   └── golden_rule_hours.yaml # Golden Rule hour definitions
 ├── docs/
-│   ├── curriculum/                # Curriculum content
-│   │   ├── foundations/
-│   │   ├── development/
-│   │   ├── advanced/
-│   │   ├── capstone/
-│   │   └── mathematics/
-│   ├── governance/                # Governance documentation
+│   ├── curriculum/            # Curriculum content modules
+│   ├── governance/            # Governance documentation
 │   ├── stylesheets/
-│   │   ├── extra.css             # Web styling
-│   │   └── pdf.css               # PDF-specific styling
-│   └── index.md                  # Homepage
+│   │   ├── extra.css         # Web styles (ANEW branding)
+│   │   └── pdf.css           # PDF-specific styles
+│   └── index.md              # Homepage
 ├── scripts/
-│   └── validate_golden_rule.py   # Golden Rule validation script
+│   └── validate_golden_rule.py # Validation script
 ├── .gitignore
 ├── CHANGELOG.md
-├── mkdocs.yml                     # MkDocs configuration
+├── mkdocs.yml                 # MkDocs configuration
 ├── README.md
-└── requirements.txt               # Python dependencies
+└── requirements.txt           # Python dependencies
 ```
 
 ## Adding Content
@@ -500,16 +409,14 @@ This curriculum follows ANEW Brand Standard Guidelines:
   - Gray: `#505858`
 
 Styles are defined in `docs/stylesheets/extra.css` and `docs/stylesheets/pdf.css`.
->>>>>>> origin/main
 
 ## Support
 
 For questions or issues:
-<<<<<<< HEAD
 
-- Review documentation in `docs/governance/`
+- Open an issue on GitHub
+- Review governance documentation in `docs/governance/`
 - Check existing issues on GitHub
-- Create a new issue for bugs or questions
 - Contact repository administrators
 
 ## Changelog
@@ -522,13 +429,6 @@ See [CHANGELOG.md](CHANGELOG.md) for a history of changes.
 - Theme: [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
 - PDF Export: [mkdocs-exporter](https://github.com/adrienbrault/mkdocs-exporter)
 
-Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted): 2026-01-08 16:22:33
-Current User's Login: mandy1eigh007
-=======
-- Open an issue on GitHub
-- Review governance documentation in `docs/governance/`
-
 ## License
 
 [Add appropriate license information]
->>>>>>> origin/main
