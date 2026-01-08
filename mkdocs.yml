@@ -19,19 +19,16 @@ theme:
     - toc.integrate
   icon:
     repo: fontawesome/brands/github
-
 repo_url: https://github.com/mandy1eigh007/curriculum_master
 repo_name: mandy1eigh007/curriculum_master
-
 extra_css:
   - stylesheets/extra.css
-
+  - styles/anew.css
 plugins:
   - search
   # Note: PDF export via mkdocs-exporter can be enabled locally
   # Uncomment the following line to enable PDF generation:
   # - exporter
-
 nav:
   - Home: index.md
   - Curriculum:
@@ -50,7 +47,6 @@ nav:
     - Single Source of Truth: governance/single-source.md
     - Change Control: governance/change-control.md
     - Golden Rule: governance/golden-rule.md
-
 markdown_extensions:
   - toc:
       permalink: true

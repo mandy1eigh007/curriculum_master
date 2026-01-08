@@ -37,7 +37,6 @@ jobs:
 
       - name: Install Playwright
         run: |
-          playwright install chromium
 
       - name: Validate Golden Rule hours
         run: |
