@@ -40,6 +40,8 @@ jobs:
           pip install -r requirements.txt
       
       - name: Install Playwright (required for PDF generation)
+        # Only install Playwright on pushes to main, not on PRs
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           playwright install chromium
           playwright install-deps chromium
@@ -49,12 +51,21 @@ jobs:
           python scripts/validate_golden_rule.py
           echo "Golden Rule validation passed!"
       
-      - name: Build MkDocs site with PDF
+      - name: Build MkDocs site with PDF (main branch)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           mkdocs build
           echo "MkDocs build completed successfully!"
       
+      - name: Build MkDocs site without PDF (PR)
+        if: github.event_name == 'pull_request'
+        run: |
+          mkdocs build -f mkdocs-pr.yml
+          echo "MkDocs build completed successfully (PR mode, no PDF)!"
+      
       - name: Verify PDF was generated
+        # Only verify PDF on pushes to main
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           if [ -f site/downloads/curriculum.pdf ]; then
             echo "PDF generated successfully!"
