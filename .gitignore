@@ -42,3 +42,6 @@ Thumbs.db
 tmp/
 temp/
 *.tmp
+
+# Private notes and historical documentation
+docs/private-notes/
