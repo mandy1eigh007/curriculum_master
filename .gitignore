@@ -31,7 +31,7 @@ site/
 .vscode/
 .idea/
 *.swp
-*.swo
+*.swo/
 *~
 
 # OS
@@ -43,6 +43,5 @@ tmp/
 temp/
 *.tmp
 
-# Copilot notes folder - for sharing context
-.copilot/notes/*
-!.copilot/notes/README.md
+# Private notes and historical documentation
+docs/private-notes/

@@ -29,6 +29,7 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/anew.css
 
 plugins:
   - search
