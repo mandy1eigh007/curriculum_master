@@ -8,34 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Initial docs-as-code curriculum repository implementation
-- Golden Rule hour structure (Core 240 + Math 40 = 280 total)
-- MkDocs configuration with mkdocs-exporter plugin for PDF generation
-- ANEW Brand Standard Guidelines CSS styling
-- GitHub Actions workflow for automated deployment to GitHub Pages
-- Golden Rule validation script with CI integration
-- Governance documentation (Single Source, Change Control, Golden Rule)
-- Curriculum content structure with required sections
-- Comprehensive README with usage instructions
+- Initial repository setup with docs-as-code infrastructure
+- Golden Rule hours structure (240 core + 40 math = 280 total)
+- Automated validation of Golden Rule hours
+- GitHub Pages deployment with PDF generation
+- ANEW brand standards styling
 
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
-
----
-
-## Template for Future Releases
-
-When creating a new release, copy this template:
+## Template for Future Entries
 
 ```markdown
-## [X.Y.Z] - YYYY-MM-DD
+## [Version] - YYYY-MM-DD
 
 ### Added
 - New features or content
@@ -55,6 +37,3 @@ When creating a new release, copy this template:
 ### Security
 - Security fixes or improvements
 ```
-
-[Unreleased]: https://github.com/mandy1eigh007/curriculum_master/compare/vX.Y.Z...HEAD
-[X.Y.Z]: https://github.com/mandy1eigh007/curriculum_master/releases/tag/vX.Y.Z
